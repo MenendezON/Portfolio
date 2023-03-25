@@ -23,6 +23,8 @@
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
 - [📝 License](#license)
 
 
@@ -102,6 +104,25 @@ his project doesn't need to be deployed
 - **Add javascript**
 - **Add a video**
 - **Create a form**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+I'm open to any suggestions about this project.
+
+Feel free to check the [issues page](../../issues/).
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project don't hesitate to give it a start. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
