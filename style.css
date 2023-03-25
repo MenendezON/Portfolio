@@ -4,11 +4,16 @@
 /* import font */
 
 :root {
+  --blackText: #172b4d;
   --white: #fff;
   --black: #36383f;
   --gray: #f4f5f7;
   --blue: #6070ff;
+  --purple: #939eff;
 }
+
+.purpleColor { color: var(--purple); }
+.blackTextColor { color: var(--blackText); }
 
 * {
   margin: 0;
@@ -20,6 +25,7 @@ html,
 body {
   background-color: var(--gray);
   font-family: "Poppins", sans-serif;
+  color: var(--blackText);
   font-size: 12pt;
   height: 100%;
 }
@@ -224,10 +230,6 @@ h1 {
 .flexContent > * {
   padding: 10px;
   flex: 1 100%;
-}
-
-.link-connect ul li a img {
-  width: 100%;
 }
 
 @media (min-width: 768px) {
