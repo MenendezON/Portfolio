@@ -133,20 +133,20 @@ ul {
   display: none;
 }
 
-.side-menu:checked ~ nav {
+.side-menu:checked~nav {
   max-height: 100%;
 }
 
-.side-menu:checked ~ .hamb .hamb-line {
+.side-menu:checked~.hamb .hamb-line {
   background: transparent;
 }
 
-.side-menu:checked ~ .hamb .hamb-line::before {
+.side-menu:checked~.hamb .hamb-line::before {
   transform: rotate(-45deg);
   top: 0;
 }
 
-.side-menu:checked ~ .hamb .hamb-line::after {
+.side-menu:checked~.hamb .hamb-line::after {
   transform: rotate(45deg);
   top: 0;
 }
@@ -166,6 +166,7 @@ section {
 .col ul li,
 .link-connect ul li {
   display: inline;
+  margin: 5px;
 }
 
 .bgImage {
@@ -201,12 +202,38 @@ h1 {
 }
 
 .tag {
-  background-color: #b4baf0;
-  color: #6070ff;
-  border-radius: 5px;
-  margin: 10px 0 10px 0;
-  padding: 5px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070FF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 12px;
+  background: #EBEBFF;
+  border-radius: 8px;
 }
+
+.infos {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7A869A;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 10px;
+}
+
+.infos span{color: #344563;}
 
 .btn {
   font-family: 'Poppins', sans-serif;
@@ -268,6 +295,7 @@ h1 {
   border: 1px solid silver;
 }
 
+.btncollapseT,
 .btncollapse {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -291,6 +319,17 @@ h1 {
   content: "";
   background-image: url(./images/down_arrow.png);
   background-repeat: no-repeat;
+}
+
+.btncollapseT:after {
+  flex-shrink: 0;
+  width: 25px;
+  height: 21px;
+  margin-left: auto;
+  content: "";
+  background-image: url(./images/down_arrow.png);
+  background-repeat: no-repeat;
+  transform: rotate(-90deg);
 }
 
 .collapse ul li {
@@ -319,4 +358,18 @@ h1 {
   padding: 10px;
   order: 3;
   width: 100%;
+}
+
+.subtitle {
+  width: 295px;
+  height: 36px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172B4D;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
