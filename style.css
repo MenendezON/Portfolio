@@ -10,6 +10,7 @@
   --gray: #f4f5f7;
   --blue: #6070ff;
   --purple: #7f8cff;
+  --silver: #cfd8dc;
 }
 
 .purpleColor {
@@ -186,6 +187,11 @@ section {
   background-color: #fff;
 }
 
+.left-top-radius {
+  border-top-left-radius: 70px;
+  background-color: red;
+}
+
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -219,6 +225,8 @@ h1 {
   background: #ebebff;
   border-radius: 8px;
 }
+
+.white { color: var(--white); }
 
 .infos {
   font-family: 'Poppins', sans-serif;
@@ -283,7 +291,59 @@ h1 {
   display: flex;
   flex-flow: row wrap;
   padding: 10px;
+  padding-bottom: 10px;
   background-color: var(--white);
+}
+
+.contact {
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  left: 1px;
+  top: 3650px;
+  background: #6070ff;
+  background-image: url(./images/imgbg-mobile-contact.png);
+  background-size: contain;
+  padding: 75px 20px 0 20px;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  display: inline;
+  height: 48px;
+  background: var(--white);
+  border: 1px solid var(--silver);
+  border-radius: 8px;
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  align-items: center;
+  color: #172b4d;
+}
+
+textarea {
+  height: 170px;
+  padding: 15px;
+  border: 1px solid var(--silver);
+  border-radius: 8px;
+  margin: 10px;
+  width: 90%;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  align-items: center;
+  color: #172b4d;
+}
+
+form button {
+  margin-left: 20px;
 }
 
 .item {
@@ -307,9 +367,9 @@ h1 {
   display: flex;
   width: 100%;
   text-align: left;
-  background-color: white;
+  background-color: var(--white);
   border: 0;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid var(--silver);
   padding: 15px 10px 15px 0;
 }
 
