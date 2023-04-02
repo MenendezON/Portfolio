@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="images\logo_menendezon.png" alt="logo" width="140"  height="auto" />
+  <img src="./images/logo_menendezon.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3><b>Portolio</b></h3>
 
@@ -48,7 +48,10 @@
 
 - **Adding pictures**
 - **Using flex**
+- **Usign grid**
 - **Side bar menu**
+- **Create a contact form**
+- **Store messages from contact form**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +106,6 @@ his project doesn't need to be deployed
 
 - **Add javascript**
 - **Add a video**
-- **Create a form**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
