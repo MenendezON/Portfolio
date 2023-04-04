@@ -438,7 +438,144 @@ form button {
   background: var(--activeButton);
 }
 
-/* desktop */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .side-menu,
+  .hamb {
+    display: none;
+  }
+
+  .header {
+    background-color: var(--white);
+    padding: 0 50px 0 50px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .logo {
+    height: 80px;
+    width: 100%;
+  }
+
+  .nav {
+    background-color: var(--white);
+    position: sticky;
+    height: 80px;
+    max-height: 80px;
+    width: 100%;
+    top: 0;
+    text-align: end;
+  }
+
+  .menu li {
+    display: inline-flex;
+  }
+
+  .menu a {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #344563;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .project {
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+    margin: 50px 25px;
+  }
+
+  .project > * {
+    flex: 1 100%;
+  }
+
+  .item:nth-of-type(1) {
+    background-color: var(--white);
+    background-image: url(./images/imgbg.jpg);
+    padding: 150px 100px;
+    border-bottom-left-radius: 50px;
+  }
+
+  .achievement {
+    border: 1px solid var(--collapseborder);
+    width: 80.28%;
+    margin: 100px auto;
+    border-radius: 25px;
+    background-color: var(--white);
+  }
+
+  .aside {
+    flex: 1 0 0;
+  }
+
+  .achievement .aside-1 {
+    border-radius: 8px;
+    margin: 20px;
+  }
+
+  .achievement .aside-2 {
+    margin: 20px;
+  }
+
+  .collapse ul {
+    display: flex;
+    gap: 6px;
+  }
+
+  .collapse ul li {
+    background-color: var(--collapsebg);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item:nth-of-type(4) {
+    background-image: url(./images/imgbg-mobile-contact.png);
+    background-repeat: repeat-x;
+    background-position: top right;
+  }
+
+  form .btn {
+    margin: auto;
+  }
+
+  .item:nth-of-type(3) {
+    background-color: var(--white);
+    border-top-right-radius: 50px;
+  }
+
+  .item:nth-of-type(3) .project {
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+    margin: 125px 30px;
+  }
+
+  .item:nth-of-type(4) .project {
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+    margin: 75px 75px;
+  }
+
+  .contact-form article {
+    margin: 50px;
+    padding: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .side-menu,
   .hamb {
@@ -447,7 +584,7 @@ form button {
 
   .header {
     background-color: var(--white);
-    padding: 0 155px 0 155px;
+    padding: 0 10% 0 10%;
     display: grid;
     grid-template-columns: 20% 80%;
   }
@@ -487,7 +624,7 @@ form button {
   .item:nth-of-type(1) {
     background-color: var(--white);
     background-image: url(./images/imgbg.jpg);
-    padding: 260px 280px 0 280px;
+    padding: 260px 15% 0 15%;
     border-bottom-left-radius: 100px;
   }
 
@@ -545,12 +682,31 @@ form button {
     background-repeat: repeat-x;
   }
 
+  .item:nth-of-type(4) .project {
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+    margin: 75px 75px;
+  }
+
   .contact-form article {
-    margin: 140px 21.6% 125px 21.6%;
+    margin: 140px 15% 125px 15%;
     padding: 0 116px 0 116px;
   }
 
   form .btn {
     margin: auto;
+  }
+
+  .item:nth-of-type(3) {
+    background-color: var(--white);
+    border-top-right-radius: 50px;
+  }
+
+  .item:nth-of-type(3) .project {
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+    margin: 125px 100px;
   }
 }
