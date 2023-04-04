@@ -64,31 +64,39 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps. It's a simple static project
+To get a local copy up and running, follow these steps. It's a simple static project.
 
 ### Prerequisites
 
-Nothing as prerequisites
+In order to run this project, you need :
+- Git to clone it (optional) 
+- A browser to run it
+- Some skill in HTML/CSS
+- An IDE
 
 ### Setup
 
-This project doesn't need something to install
+This project doesn't need something to install, run this command to download the project : 
+git clone git@github.com:MenendezON/Portfolio.git
 
 ### Install
 
-- N/A
+To install the project, run this command :
+**npm install**
 
 ### Usage
 
-- N/A
+To run the project, execute the following command :
+**npm start**
 
 ### Run tests
 
-- N/A
+To run the project, execute the following command :
+**npm test**
 
 ### Deployment
 
-his project doesn't need to be deployed
+This project doesn't need to be deployed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
