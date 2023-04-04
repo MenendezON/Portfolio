@@ -5,23 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- App title -->
-    <title>Portfolio : Mobile first</title>
-    <!-- Link CSS file -->
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navigation bar -->
     <header class="header">
-        <!-- Logo -->
         <a href="#" class="logo">
-            <img src="images/logo_menendezon.png" alt="">
+            <img src="./images/logo_menendezon.png" alt="">
         </a>
-        <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu" />
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
                 <li><a href="#">Porfolio</a></li>
@@ -29,22 +22,25 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
     </header>
+
     <!-- Main content -->
     <div class="grid">
-        <section class="card bgImage left-bottom-radius">
+        <section class="item intro">
             <article class="home">
-                <h1 class="blackTextColor">
+                <h1>
                     I'm Menendez.<br>
                     Glad to see
                     you!
                 </h1>
-                <p class="paragraph blackTextColor">
-                    I'm a software developer! I can help you build a product, feature or website look through some of my
+                <p class="paragraph">
+                    I'm a software developer! I can help you build a product, feature or website Look through some of my
                     work and experience! If you like what you see and have a project you need coded, don't hestiate to
                     contact me.
                 </p>
-                <h5 class="paragraph purpleColor">LET'S CONNECT</h5>
+                <h5>let's connect</h5>
                 <div class="link-connect">
                     <ul>
                         <li>
@@ -72,8 +68,8 @@
             </article>
         </section>
 
-        <section class="card">
-            <div class="project border item">
+        <section class="item">
+            <div class="project achievement p1">
                 <aside class="aside aside-1">
                     <img src="images/img2.jpg" alt="" class="fullPic">
                 </aside>
@@ -93,13 +89,11 @@
                             <li class="tag">jQuery</li>
                         </ul>
                     </div>
-                    <button class="btn" >See project</button>
+                    <button class="btn">See project</button>
                 </aside>
             </div>
-        </section>
         
-        <section class="card">
-            <div class="project border item">
+            <div class="project achievement p2">
                 <aside class="aside aside-1">
                     <img src="images/img1.jpg" alt="" class="fullPic">
                 </aside>
@@ -119,13 +113,11 @@
                             <li class="tag">Javascript</li>
                         </ul>
                     </div>
-                    <button class="btn" >See project</button>
+                    <button class="btn">See project</button>
                 </aside>
             </div>
-        </section>
         
-        <section class="card">
-            <div class="project border item">
+            <div class="project achievement p3">
                 <aside class="aside aside-1">
                     <img src="images/img3.jpg" alt="" class="fullPic">
                 </aside>
@@ -145,23 +137,21 @@
                             <li class="tag">Javascript</li>
                         </ul>
                     </div>
-                    <button class="btn" >See project</button>
+                    <button class="btn">See project</button>
                 </aside>
-            </div>
+            </div>   
         </section>
 
-        <section class="card right-top-radius">
-            <div class="project right-top-radius">
+        <section class="item about">
+            <div class="project">
                 <aside class="aside aside-1">
-                    <h1 class="blackTextColor">
+                    <h1>
                         About Myself
                     </h1>
-                    <p class="paragraph blackTextColor">
-                        I'm a software developer! I can help you build a product, feature or website look through some of my
-                        work and experience! If you like what you see and have a project you need coded, don't hestiate to
-                        contact me.
+                    <p class="paragraph">
+                        Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.
                     </p>
-                    <h5 class="paragraph purpleColor">LET'S CONNECT</h5>
+                    <h5>let's connect</h5>
                     <div class="link-connect">
                         <ul>
                             <li>
@@ -201,11 +191,29 @@
                                 <img src="./images/css.png" alt=""> CSS
                             </li>
                         </ul>
-                        <button class="btncollapseT">Frameworks</button >
-                        <button class="btncollapseT">Skills</button >
+                        <button class="btncollapseT">Frameworks</button>
+                        <button class="btncollapseT">Skills</button>
                     </div>
                 </aside>
             </div>
+        </section>
+
+        <section class="item contact-form">
+            <article>
+                <h1 class="center">Contact me</h1>
+                <p class="paragraph">
+                    If you have an application you are interested in developing, a feature that you need built or a
+                    project that needs coding. I'd love to help with it
+                </p>
+                <form action="">
+                    <input type="text" value="Menendez NELSON" name="full_name" id="full_name" maxlength="30"
+                        placeholder="Write your name" required>
+                    <input type="email" name="email_addr" id="email_addr" placeholder="Write your email" required>
+                    <textarea name="txt_msg" id="txt_msg" cols="30" rows="10" maxlength="500"
+                        placeholder="Write your message header" required></textarea>
+                    <button class="btn">Get in touch</button>
+                </form>
+            </article>
         </section>
     </div>
 
