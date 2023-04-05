@@ -615,7 +615,7 @@ form button {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #344563;
+    color: var(--textColor);
     flex: none;
     order: 0;
     flex-grow: 0;
