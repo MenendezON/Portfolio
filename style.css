@@ -45,7 +45,7 @@
 
 html,
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -148,7 +148,7 @@ ul {
 .hamb-line::before,
 .hamb-line::after {
   background: var(--purple);
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   position: absolute;
@@ -222,10 +222,23 @@ h5 {
   flex-grow: 0;
 }
 
-.col ul li,
 .link-connect ul li {
   display: inline;
   margin: 10px 10px 0 0;
+}
+
+.col ul {
+  float: left;
+}
+
+.col ul .tag {
+  margin-right: 1rem;
+  float: left;
+}
+
+.btn {
+  float: left;
+  clear: both;
 }
 
 /* achievement */
