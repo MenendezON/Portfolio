@@ -45,7 +45,7 @@
 
 html,
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -148,7 +148,7 @@ ul {
 .hamb-line::before,
 .hamb-line::after {
   background: var(--purple);
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   position: absolute;
@@ -372,7 +372,36 @@ h5 {
   width: 100%;
 }
 
-
+/* contact */
+input {
+  width: 90%;
+  display: inline;
+  height: 48px;
+  background: var(--white);
+  border: 1px solid var(--info);
+  border-radius: 8px;
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  font-size: 17px;
+  line-height: 20px;
+  align-items: center;
+  color: var(--txtFieldColor);
+}
+textarea {
+  height: 170px;
+  padding: 15px;
+  border: 1px solid var(--info);
+  border-radius: 8px;
+  margin: 10px;
+  width: 90%;
+  font-size: 17px;
+  line-height: 20px;
+  align-items: center;
+  color: var(--txtFieldColor);
+}
+form button {
+  margin-left: 20px;
+}
 
 .btn {
   font-weight: 500;
