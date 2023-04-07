@@ -82,7 +82,8 @@ ul {
   background-size: contain;
   color: var(--white);
   text-align: center;
-  padding: 75px 20px 0 20px;
+  padding: 103px 24px 0 24px;
+  height:779px;
 }
 
 .center {
@@ -473,7 +474,7 @@ input {
   background: var(--white);
   border: 1px solid var(--info);
   border-radius: 8px;
-  margin: 10px 0 10px 0;
+  margin-top: 20px;
   padding: 15px;
   font-size: 17px;
   line-height: 20px;
@@ -481,12 +482,16 @@ input {
   color: var(--txtFieldColor);
 }
 
+input[type=text]{
+  margin-top: 52px;
+}
+
 textarea {
   height: 170px;
   padding: 15px;
   border: 1px solid var(--info);
   border-radius: 8px;
-  margin: 10px;
+  margin-top: 18px;
   width: 90%;
   font-size: 17px;
   line-height: 20px;
@@ -715,13 +720,6 @@ form button {
     margin: 125px 30px;
   }
 
-  .item:nth-of-type(4) .project {
-    display: flex;
-    flex-flow: row;
-    padding: 0;
-    margin: 75px 75px;
-  }
-
   .contact-form article {
     margin: 50px;
     padding: 0;
@@ -833,13 +831,6 @@ form button {
   .item:nth-of-type(4) {
     background-image: url(./images/imgbg-mobile-contact.png);
     background-repeat: repeat-x;
-  }
-
-  .item:nth-of-type(4) .project {
-    display: flex;
-    flex-flow: row;
-    padding: 0;
-    margin: 75px 75px;
   }
 
   .contact-form article {
