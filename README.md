@@ -86,7 +86,7 @@ To install the project, run this command :
 
 ### Usage
 
-To run the project, execute the following command :
+To run the project on your computer, execute the following command :
 **npm start**
 
 ### Run tests
@@ -96,7 +96,7 @@ To run the project, execute the following command :
 
 ### Deployment
 
-This project doesn't need to be deployed
+This project has been deployed at this address https://menendezon.github.io/Portfolio/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
