@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./public/images/favicon-16x16.png">
+    <title>Menendezon's Portfolio</title>
+    <link rel="stylesheet" href="./public/style.css">
 </head>
 
 <body>
     <!-- Navigation bar -->
     <header class="header">
-        <a href="#" class="logo">
-            <img src="./images/logo_menendezon.png" alt="">
+        <a href="#home" class="logo">
+            <img src="./public/images/logo_menendezon.png" alt="">
         </a>
         <nav class="nav">
+            <div class="close"><img src="./public/images/cross-icon.png" alt=" "></div>
             <ul class="menu">
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a> </li>
@@ -29,7 +30,7 @@
     </header>
 
     <!-- Main content -->
-    <div class="grid">
+    <div class="grid" id="home">
         <section class="item intro">
             <article class="home">
                 <h1>
@@ -47,22 +48,22 @@
                     <ul>
                         <li>
                             <a href="https://www.linkedin.com/in/menendezon">
-                                <img src="images/linkedin.png" alt="" srcset="">
+                                <img src="./public/images/linkedin.png" alt="" >
                             </a>
                         </li>
                         <li>
                             <a href="https://twitter.com/menendezon">
-                                <img src="images/twitter.png" alt="" srcset="">
+                                <img src="./public/images/twitter.png" alt="" >
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/menendezon">
-                                <img src="images/instagram.png" alt="" srcset="">
+                                <img src="./public/images/instagram.png" alt="" >
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/MenendezON">
-                                <img src="images/github.png" alt="" srcset="">
+                                <img src="./public/images/github.png" alt="" >
                             </a>
                         </li>
                     </ul>
@@ -73,7 +74,7 @@
         <section class="item" id="portfolio">
             <div class="project achievement p1">
                 <aside class="aside aside-1">
-                    <img src="images/img2.jpg" alt="" class="fullPic">
+                    <img src="./public/images/img2.jpg" alt="" class="fullPic">
                 </aside>
                 <aside class="aside aside-2">
                     <h3 class="subtitle">Alpha Haiti</h3>
@@ -97,7 +98,7 @@
 
             <div class="project achievement p2">
                 <aside class="aside aside-1">
-                    <img src="images/img1.jpg" alt="" class="fullPic">
+                    <img src="./public/images/img1.jpg" alt="" class="fullPic">
                 </aside>
                 <aside class="aside aside-2">
                     <h3 class="subtitle">GebCristal</h3>
@@ -121,7 +122,7 @@
 
             <div class="project achievement p3">
                 <aside class="aside aside-1">
-                    <img src="images/img3.jpg" alt="" class="fullPic">
+                    <img src="./public/images/img3.jpg" alt="" class="fullPic">
                 </aside>
                 <aside class="aside aside-2">
                     <h3 class="subtitle">AATA</h3>
@@ -147,9 +148,9 @@
         <section class="item about" id="about">
             <div class="project">
                 <aside class="aside aside-1">
-                    <h1>
+                    <h2>
                         About Myself
-                    </h1>
+                    </h2>
                     <p class="paragraph">
                         Hello I’m a software developer! I can help you build a product , feature or website Look through
                         some of my work and experience! If you like what you see and have a project you need coded,
@@ -160,22 +161,22 @@
                         <ul>
                             <li>
                                 <a href="https://www.linkedin.com/in/menendezon">
-                                    <img src="images/linkedin.png" alt="" srcset="">
+                                    <img src="./public/images/linkedin.png" alt="" >
                                 </a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/menendezon">
-                                    <img src="images/twitter.png" alt="" srcset="">
+                                    <img src="./public/images/twitter.png" alt="" >
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/menendezon">
-                                    <img src="images/instagram.png" alt="" srcset="">
+                                    <img src="./public/images/instagram.png" alt="" >
                                 </a>
                             </li>
                             <li>
                                 <a href="https://github.com/MenendezON">
-                                    <img src="images/github.png" alt="" srcset="">
+                                    <img src="./public/images/github.png" alt="" >
                                 </a>
                             </li>
                         </ul>
@@ -187,12 +188,12 @@
                         <button class="btncollapse">Languages</button>
                         <ul>
                             <li>
-                                <img src="./images/js.png" alt="">Javascript</li>
+                                <img src="./public/images/js.png" alt="">Javascript</li>
                             <li>
-                                <img src="./images/html.png" alt=""> HTML
+                                <img src="./public/images/html.png" alt=""> HTML
                             </li>
                             <li>
-                                <img src="./images/css.png" alt=""> CSS
+                                <img src="./public/images/css.png" alt=""> CSS
                             </li>
                         </ul>
                         <button class="btncollapseT">Frameworks</button>
@@ -203,7 +204,7 @@
         </section>
         <section class="item contact-form" id="contact">
             <article>
-                <h1 class="center">Contact me</h1>
+                <h2 class="center">Contact me</h2>
                 <p class="paragraph">
                     If you have an application you are interested in developing, a feature that you need built or a
                     project that needs coding. I'd love to help with it
@@ -219,7 +220,7 @@
             </article>
         </section>
     </div>
-
+    <script src="./public/script.js"></script>
 </body>
 
 </html>

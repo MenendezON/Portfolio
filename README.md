@@ -1,9 +1,9 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./images/logo_menendezon.png" alt="logo" width="140"  height="auto" />
+  <img src="./public/images/logo_menendezon.png" alt="logo" width="140"  height="auto" />
   <br/>
-  <h3><b>Portolio</b></h3>
+  <h3><b>Menendezon's Portfolio</b></h3>
 
 </div>
 
@@ -31,7 +31,7 @@
 # 📖 Portfolio <a name="about-project"></a>
 
 
-**Portfollio** is a project that introduce me as a Software developper with some projects, and a short description about me.
+**Menendezon's Portfolio** is a project that introduces me as a Software developer with some achievements, a short description of me, my tech and soft skills, and a contact form for those who hope to reach out to me.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,6 +39,7 @@
 
 <details>
   <summary>HTML/CSS</summary>
+  <summary>Javascript</summary>
   <summary>Linters</summary>
   <summary>Github</summary>
 </details>
@@ -51,13 +52,14 @@
 - **Usign grid**
 - **Side bar menu**
 - **Create a contact form**
+- **Adding js feature**
 - **Store messages from contact form**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- Click on this link to visit the project : https://menendezon.github.io/Portfolio/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,7 +73,7 @@ To get a local copy up and running, follow these steps. It's a simple static pro
 In order to run this project, you need :
 - Git to clone it (optional) 
 - A browser to run it
-- Some skill in HTML/CSS
+- Some skill in HTML/CSS and js
 - An IDE
 
 ### Setup
