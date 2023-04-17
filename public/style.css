@@ -131,9 +131,9 @@ ul {
   background-color: var(--purple);
   overflow: hidden;
   max-height: 100%;
-  top: 0px;
+  top: 0;
   z-index: 10;
-  padding-top:25px;
+  padding-top: 25px;
   transition: max-height 0.5s ease-out;
 }
 
@@ -190,7 +190,6 @@ ul {
   max-height: 100%;
 }
 
-
 .side-menu:checked ~ .hamb .hamb-line {
   background: transparent;
 }
@@ -212,7 +211,8 @@ ul {
 }
 
 /* intro */
-h1, h2 {
+h1,
+h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
@@ -224,6 +224,7 @@ h1, h2 {
   flex-grow: 0;
   animation: intro 1500ms ease 0s 1 normal forwards;
 }
+
 .h1 {
   font-weight: 700;
   font-size: 40px;
@@ -235,6 +236,7 @@ h1, h2 {
   order: 0;
   flex-grow: 0;
 }
+
 @keyframes intro {
   0% {
     opacity: 0;
@@ -247,7 +249,7 @@ h1, h2 {
   }
 }
 
-.side-menu:checked ~ .home h1{color:red}
+.side-menu:checked ~ .home h1 { color: red; }
 
 h5 {
   font-weight: 500;
@@ -573,10 +575,6 @@ form button {
     width: 100%;
   }
 
-  
-  
- 
-  
   .nav {
     background-color: var(--white);
     position: relative;
@@ -587,9 +585,9 @@ form button {
     text-align: end;
     display: block;
   }
-  
+
   .nav div {
-    display:none;
+    display: none;
   }
 
   .menu li {
