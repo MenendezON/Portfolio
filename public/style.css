@@ -137,6 +137,15 @@ ul {
   transition: max-height 0.5s ease-out;
 }
 
+.nav div {
+    padding:15px;
+    font-size: 1.7em;
+    color:var(--white);
+    text-align: right;
+    margin-right:15px;
+    cursor: pointer;
+  }
+
 .menu a {
   display: block;
   padding: 30px;
