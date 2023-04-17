@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./images/logo_menendezon.png" alt="logo" width="140"  height="auto" />
+  <img src="./public/images/logo_menendezon.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3><b>Menendezon's Portfolio</b></h3>
 
