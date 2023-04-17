@@ -124,33 +124,33 @@ ul {
 }
 
 .nav {
-  display: none;
+  display: block;
   height: 100%;
   width: 100%;
   position: fixed;
-  background-color: var(--purple);
+  background-color: rgba(96,112,255, 0.93);
   overflow: hidden;
   max-height: 100%;
   top: 0;
-  z-index: 10;
-  padding-top: 25px;
+  z-index: 2;
+  padding-top: 0px;
   transition: max-height 0.5s ease-out;
 }
 
 .nav div {
-  padding: 15px;
+  padding: 25px 40px;
   font-size: 1.7em;
   color: var(--white);
   text-align: right;
-  margin-right: 15px;
   cursor: pointer;
 }
 
 .menu a {
   display: block;
-  padding: 30px;
-  color: var(--white);
-  font-size: 2em;
+  padding: 30px 0 30px 28px;
+font-weight: 600;
+font-size: 32px;
+color: #FFFFFF;
 }
 
 .menu a:hover {
