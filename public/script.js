@@ -63,3 +63,17 @@ viewpjt.forEach((btns) => {
     createBtn(ach, "Hello Button <img src='./public/images/github.png' alt=' '>", 'btn 2');
   });
 });
+
+function validateForm() {
+  let emailField = document.getElementById("email");
+  let email = emailField.value;
+  if (email !== email.toLowerCase()) {
+    let errorMessage = document.createElement("p");
+    errorMessage.innerHTML = "**The email must be in lowercase.";
+    errorMessage.style.color = "white";
+    errorMessage.style.fontStyle = "italic";
+    emailField.parentNode.appendChild(errorMessage, emailField.nextSibling);
+    return false;
+  }
+  return true;
+}
