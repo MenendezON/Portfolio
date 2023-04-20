@@ -258,7 +258,9 @@ h2 {
   }
 }
 
-.side-menu:checked ~ .home h1 { color: red; }
+.side-menu:checked ~ .home h1 {
+  color: red;
+}
 
 h5 {
   font-weight: 500;
@@ -321,6 +323,22 @@ h5 {
   margin: 10px 10px 0 0;
 }
 
+.popup {
+  width: 94%;
+  height: 96vh;
+  position: fixed;
+  background-color: var(--white);
+  overflow: hidden;
+  top: 2vh;
+  left: 3%;
+  z-index: 2;
+  border: 2px solid var(--collapseborder);
+  box-shadow: 0 0 10px 5px silver;
+  border-radius: 8px;
+  margin: auto;
+  display: flex;
+}
+
 /* achievement */
 .achievement {
   border: 1px solid var(--collapseborder);
@@ -330,6 +348,7 @@ h5 {
   background-color: var(--white);
 }
 
+.popup img,
 .achievement img {
   width: 100%;
 }
@@ -453,13 +472,6 @@ h5 {
   margin: 6px 0 6px 0;
 }
 
-.collapse ul li img {
-  width: 48px;
-  height: 48px;
-  margin-right: 3px;
-  vertical-align: middle;
-}
-
 .aside-2 {
   order: 3;
   width: 100%;
@@ -532,6 +544,22 @@ form button {
   margin-left: 20px;
 }
 
+.closeBtn {
+  display: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.show {
+  display: block;
+}
+
+.closeBtn img {
+  width: 15px;
+  float: right;
+}
+
+.btnForm,
 .btn {
   font-weight: 500;
   font-size: 17px;
@@ -551,15 +579,29 @@ form button {
   background: var(--white);
   border: 1px solid var(--purple2);
   border-radius: 8px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin: 15px 10px 10px 0;
+  float: left;
 }
 
+.btnForm img,
+.btn img {
+  width: 15px;
+}
+
+.collapse ul li img {
+  width: 48px;
+  height: 48px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.btnForm:hover,
 .btn:hover {
   color: var(--white);
   background: var(--purple);
 }
 
+.btnForm:active,
 .btn:active {
   color: var(--white);
   background: var(--activeButton);
@@ -635,6 +677,34 @@ form button {
     flex: 1 100%;
   }
 
+  .closeBtn {
+    display: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .closeBtn img {
+    width: 15px;
+    float: right;
+  }
+
+  .popup {
+    width: 96%;
+    height: 96vh;
+    position: fixed;
+    background-color: var(--white);
+    overflow: hidden;
+    top: 2vh;
+    left: 2%;
+    z-index: 2;
+    border: 2px solid var(--collapseborder);
+    box-shadow: 0 0 10px 5px silver;
+    border-radius: 8px;
+    padding: 24px;
+    margin: auto;
+    display: flex;
+  }
+
   .achievement {
     border: 1px solid var(--collapseborder);
     width: 80.28%;
@@ -677,8 +747,8 @@ form button {
     background-image: url(./images/imgbg-desktop-contact.png);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 75px;
-    padding-top: 75px;
+    padding-bottom: 100px;
+    padding-top: 50px;
     height: 800px;
   }
 
@@ -687,9 +757,10 @@ form button {
     padding: 0 116px 0 116px;
   }
 
-  form .btn {
-    margin: auto;
-    margin-top: 20px;
+  .btnForm {
+    margin: 30px auto;
+    position: relative;
+    left: 45%;
   }
 
   .item:nth-of-type(3) {
