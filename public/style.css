@@ -195,20 +195,20 @@ ul {
   display: none;
 }
 
-.side-menu:checked~nav {
+.side-menu:checked ~ nav {
   max-height: 100%;
 }
 
-.side-menu:checked~.hamb .hamb-line {
+.side-menu:checked ~ .hamb .hamb-line {
   background: transparent;
 }
 
-.side-menu:checked~.hamb .hamb-line::before {
+.side-menu:checked ~ .hamb .hamb-line::before {
   transform: rotate(-45deg);
   top: 0;
 }
 
-.side-menu:checked~.hamb .hamb-line::after {
+.side-menu:checked ~ .hamb .hamb-line::after {
   transform: rotate(45deg);
   top: 0;
 }
@@ -258,7 +258,7 @@ h2 {
   }
 }
 
-.side-menu:checked~.home h1 {
+.side-menu:checked ~ .home h1 {
   color: red;
 }
 
@@ -333,7 +333,7 @@ h5 {
   left: 3%;
   z-index: 2;
   border: 2px solid var(--collapseborder);
-  box-shadow: 0px 0px 10px 5px silver;
+  box-shadow: 0 0 10px 5px silver;
   border-radius: 8px;
   margin: auto;
   display: flex;
@@ -420,7 +420,7 @@ h5 {
   padding: 25px 20px 10px 20px;
 }
 
-.project>* {
+.project > * {
   padding: 10px;
   flex: 1 100%;
 }
@@ -470,13 +470,6 @@ h5 {
   line-height: 20px;
   padding: 12px;
   margin: 6px 0 6px 0;
-}
-
-.collapse ul li img {
-  width: 48px;
-  height: 48px;
-  margin-right: 3px;
-  vertical-align: middle;
 }
 
 .aside-2 {
@@ -592,7 +585,14 @@ form button {
 
 .btnForm img,
 .btn img {
-  width: 15px
+  width: 15px;
+}
+
+.collapse ul li img {
+  width: 48px;
+  height: 48px;
+  margin-right: 3px;
+  vertical-align: middle;
 }
 
 .btnForm:hover,
@@ -609,7 +609,6 @@ form button {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
   .side-menu,
   .hamb {
     display: none;
@@ -674,7 +673,7 @@ form button {
     margin: 166px 144px 166px 144px;
   }
 
-  .project>* {
+  .project > * {
     flex: 1 100%;
   }
 
@@ -699,7 +698,7 @@ form button {
     left: 2%;
     z-index: 2;
     border: 2px solid var(--collapseborder);
-    box-shadow: 0px 0px 10px 5px silver;
+    box-shadow: 0 0 10px 5px silver;
     border-radius: 8px;
     padding: 24px;
     margin: auto;
