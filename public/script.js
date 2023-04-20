@@ -65,15 +65,17 @@ viewpjt.forEach((btns) => {
 });
 
 function validateForm() {
-  let emailField = document.getElementById("email");
-  let email = emailField.value;
+  const emailField = document.getElementById('email');
+  const email = emailField.value;
   if (email !== email.toLowerCase()) {
-    let errorMessage = document.createElement("p");
-    errorMessage.innerHTML = "**The email must be in lowercase.";
-    errorMessage.style.color = "white";
-    errorMessage.style.fontStyle = "italic";
+    const errorMessage = document.createElement('p');
+    errorMessage.innerHTML = '**The email must be in lowercase.';
+    errorMessage.style.color = 'white';
+    errorMessage.style.fontStyle = 'italic';
     emailField.parentNode.appendChild(errorMessage, emailField.nextSibling);
     return false;
   }
   return true;
 }
+
+document.getElementsByClassName('btnForm')[0].addEventListener('submit', validateForm);
