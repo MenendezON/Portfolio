@@ -272,8 +272,40 @@ h5 {
   margin-bottom: 10px;
 }
 
+.col ul li,
+.link-connect ul li {
+  display: inline;
+  margin: 10px 10px 0 0;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--txtFieldColor);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 12px;
+}
+
+.infos {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--info);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 10px;
+}
+
+.infos span {
+  color: var(--textColor);
+}
+
 .paragraph {
-  margin: 12px 0 10px 0;
+  margin: 0;
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -315,85 +347,6 @@ h5 {
     transform-origin: top;
     opacity: 1;
   }
-}
-
-.col ul li,
-.link-connect ul li {
-  display: inline;
-  margin: 10px 10px 0 0;
-}
-
-.popup {
-  width: 94%;
-  height: 96vh;
-  position: fixed;
-  background-color: var(--white);
-  overflow: hidden;
-  top: 2vh;
-  left: 3%;
-  z-index: 2;
-  border: 2px solid var(--collapseborder);
-  box-shadow: 0 0 10px 5px silver;
-  border-radius: 8px;
-  margin: auto;
-  display: flex;
-}
-
-/* achievement */
-.achievement {
-  border: 1px solid var(--collapseborder);
-  width: 85%;
-  margin: 50px auto;
-  border-radius: 25px;
-  background-color: var(--white);
-}
-
-.popup img,
-.achievement img {
-  width: 100%;
-}
-
-.achievement .aside-1 {
-  padding: 15px;
-  border-radius: 15px;
-}
-
-.p1 .aside-1 {
-  background-color: rgb(63, 85, 198);
-}
-
-.p2 .aside-1 {
-  background-color: rgb(228, 171, 67);
-}
-
-.p3 .aside-1 {
-  background-color: #4d3617;
-}
-
-.subtitle {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: var(--txtFieldColor);
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin-top: 12px;
-}
-
-.infos {
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 16px;
-  color: var(--info);
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin-top: 10px;
-}
-
-.infos span {
-  color: var(--textColor);
 }
 
 .tag {
@@ -472,12 +425,12 @@ h5 {
   margin: 6px 0 6px 0;
 }
 
-.aside-2 {
+/* .aside-2 {
   order: 3;
   width: 100%;
   -webkit-animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
+} */
 
 @-webkit-keyframes slide-in-right {
   0% {
@@ -506,6 +459,75 @@ h5 {
     opacity: 1;
   }
 }
+
+.achievement {
+  border: 1px solid var(--collapseborder);
+  width: 90%;
+  height: 77vh;
+  margin: 100px auto;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: var(--white);
+}
+
+.achievement .fullPic {
+  width: 100%;
+  background: green;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.FBtn {
+  margin: 0;
+  width: 15px;
+  float: right;
+  cursor: pointer;
+}
+
+.achievement .closeBtn {
+  display: none;
+}
+
+/* popup css */
+
+/* debut section 2 */
+
+.popup .fullPic {
+  width: 100%;
+}
+
+.popup .step:nth-of-type(3) {
+  flex: 9;
+  order: 1;
+}
+
+.popup .step:nth-of-type(2) {
+  flex: 1;
+  order: 2;
+}
+
+.popup .paragraph,
+.popup .step:nth-of-type(4),
+.popup .step:nth-of-type(1) {
+  flex: 1 100%;
+}
+
+.popup .step:nth-of-type(1) {
+  background-color: green;
+  padding: 10px;
+  border-radius: 8px;
+  order: 3;
+}
+
+.popup .paragraph {
+  order: 3;
+}
+
+.popup .step:nth-of-type(4) {
+  order: 5;
+}
+
+/* fin section 2 */
 
 /* contact */
 input {
@@ -544,21 +566,7 @@ form button {
   margin-left: 20px;
 }
 
-.closeBtn {
-  display: none;
-  padding: 10px;
-  margin: 0;
-}
-
-.show {
-  display: block;
-}
-
-.closeBtn img {
-  width: 15px;
-  float: right;
-}
-
+.btn-popup,
 .btnForm,
 .btn {
   font-weight: 500;
@@ -595,6 +603,7 @@ form button {
   vertical-align: middle;
 }
 
+.btn-popup:hover,
 .btnForm:hover,
 .btn:hover {
   color: var(--white);
@@ -658,14 +667,6 @@ form button {
     flex-grow: 0;
   }
 
-  .item:nth-of-type(1) {
-    background-color: var(--white);
-    background-image: url(./images/imgbg.jpg);
-    background-repeat: no-repeat;
-    padding: 260px 15% 0 15%;
-    border-bottom-left-radius: 100px;
-  }
-
   .project {
     display: flex;
     flex-flow: row wrap;
@@ -677,54 +678,94 @@ form button {
     flex: 1 100%;
   }
 
-  .closeBtn {
-    display: none;
-    padding: 10px;
-    margin: 0;
-  }
-
-  .closeBtn img {
-    width: 15px;
-    float: right;
-  }
-
-  .popup {
-    width: 96%;
-    height: 96vh;
-    position: fixed;
+  .item:nth-of-type(1) {
     background-color: var(--white);
-    overflow: hidden;
-    top: 2vh;
-    left: 2%;
-    z-index: 2;
-    border: 2px solid var(--collapseborder);
-    box-shadow: 0 0 10px 5px silver;
-    border-radius: 8px;
-    padding: 24px;
-    margin: auto;
-    display: flex;
+    background-image: url(./images/imgbg.jpg);
+    background-repeat: no-repeat;
+    padding: 260px 15% 0 15%;
+    border-bottom-left-radius: 100px;
   }
 
   .achievement {
     border: 1px solid var(--collapseborder);
     width: 80.28%;
+    height: 500px;
     margin: 100px auto;
     border-radius: 25px;
+    padding: 24px;
     background-color: var(--white);
   }
 
-  .aside {
-    flex: 1 0 0;
+  .achievement .fullPic {
+    width: 50%;
+    float: left;
+    background: green;
+    padding: 10px;
+    margin: 24px;
   }
 
-  .achievement .aside-1 {
+  /* popup css */
+
+  /* debut section 2 */
+  .bg-popup {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+  }
+
+  .popup {
+    width: 45%;
+    height: 95%;
+    background-color: white;
+    margin: 1.5% auto;
     border-radius: 8px;
-    margin: 24px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .achievement .aside-2 {
-    margin: 24px;
+  .popup .fullPic {
+    border-radius: 8px;
+    width: 100%;
   }
+
+  .popup .step:nth-of-type(3) {
+    flex: 9;
+    order: 1;
+  }
+
+  .popup .step:nth-of-type(2) {
+    flex: 1;
+    order: 2;
+  }
+
+  .popup p,
+  .popup .step:nth-of-type(4) {
+    flex: 1;
+  }
+
+  .popup .step:nth-of-type(1) {
+    flex: 1 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: green;
+    order: 3;
+  }
+
+  .popup .paragraph {
+    order: 3;
+  }
+
+  .popup .step:nth-of-type(4) {
+    order: 5;
+    padding-top: 5px;
+  }
+
+  /* fin popup */
 
   .collapse ul {
     display: flex;
