@@ -38,7 +38,7 @@ function createBtn(type, content, lstClass, link) {
   return type.appendChild(btn);
 }
 
-
+createBtn('', '', '', '');
 
 // Activity 3 : Validation form
 function validateForm() {
