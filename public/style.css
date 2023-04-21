@@ -490,6 +490,25 @@ h5 {
 
 /*popup css*/
 /* debut section 2 */
+.bg-popup {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+  }
+  .popup {
+    width: 95%;
+    height: 95%;
+    background-color: white;
+    margin: 2.5% auto;
+    border-radius: 25px;
+    padding: 13px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
 
 .popup .fullPic {
