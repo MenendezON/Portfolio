@@ -50,23 +50,22 @@ viewpjt.forEach((btns) => {
     document.getElementsByClassName('achievement')[1].style.display = 'none';
     clsbtn.style.display = 'block';
     btns.style.display = 'none';
-    let position = document.getElementsByClassName('step')[3];
+    const position = document.getElementsByClassName('step')[3];
     createBtn(position, "See live <img src='./public/images/goonline.jpeg' alt=' '>", 'btn-popup', '#');
     createBtn(position, "Hello Button <img src='./public/images/github.png' alt=' '>", 'btn-popup', '#');
   });
 });
-clsbtn.addEventListener('click', ()=>{
+clsbtn.addEventListener('click', () => {
   document.querySelector('.bg-popup').classList.replace('bg-popup', 'item');
   document.querySelector('.popup').classList.replace('popup', 'achievement');
-  let position = document.getElementsByClassName('step')[3];
-  for(let i=0; i<2; i++){
-    position.removeChild(position.children[3]);
-  }
+  const position = document.getElementsByClassName('step')[3];
+  position.removeChild(position.children[3]);
+  position.removeChild(position.children[3]);
   document.getElementById('btn').style.display = 'block';
   clsbtn.style.display = 'none';
   document.getElementsByClassName('achievement')[0].removeAttribute('style');
-    document.getElementsByClassName('achievement')[1].removeAttribute('style');
-    document.getElementsByClassName('achievement')[2].removeAttribute('style');
+  document.getElementsByClassName('achievement')[1].removeAttribute('style');
+  document.getElementsByClassName('achievement')[2].removeAttribute('style');
 });
 
 // Activity 3 : Validation form

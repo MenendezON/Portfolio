@@ -195,20 +195,20 @@ ul {
   display: none;
 }
 
-.side-menu:checked~nav {
+.side-menu:checked ~ nav {
   max-height: 100%;
 }
 
-.side-menu:checked~.hamb .hamb-line {
+.side-menu:checked ~ .hamb .hamb-line {
   background: transparent;
 }
 
-.side-menu:checked~.hamb .hamb-line::before {
+.side-menu:checked ~ .hamb .hamb-line::before {
   transform: rotate(-45deg);
   top: 0;
 }
 
-.side-menu:checked~.hamb .hamb-line::after {
+.side-menu:checked ~ .hamb .hamb-line::after {
   transform: rotate(45deg);
   top: 0;
 }
@@ -258,7 +258,7 @@ h2 {
   }
 }
 
-.side-menu:checked~.home h1 {
+.side-menu:checked ~ .home h1 {
   color: red;
 }
 
@@ -373,7 +373,7 @@ h5 {
   padding: 25px 20px 10px 20px;
 }
 
-.project>* {
+.project > * {
   padding: 10px;
   flex: 1 100%;
 }
@@ -488,28 +488,29 @@ h5 {
   display: none;
 }
 
-/*popup css*/
+/* popup css */
+
 /* debut section 2 */
 .bg-popup {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    overflow: hidden;
-    z-index: 1;
-    top: 0;
-  }
-  .popup {
-    width: 95%;
-    height: 95%;
-    background-color: white;
-    margin: 2.5% auto;
-    border-radius: 25px;
-    padding: 13px;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+}
 
+.popup {
+  width: 95%;
+  height: 95%;
+  background-color: white;
+  margin: 2.5% auto;
+  border-radius: 25px;
+  padding: 13px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .popup .fullPic {
   width: 100%;
@@ -637,7 +638,6 @@ form button {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
   .side-menu,
   .hamb {
     display: none;
@@ -694,7 +694,7 @@ form button {
     margin: 166px 144px 166px 144px;
   }
 
-  .project>* {
+  .project > * {
     flex: 1 100%;
   }
 
@@ -724,7 +724,8 @@ form button {
     margin: 24px;
   }
 
-  /*popup css*/
+  /* popup css */
+
   /* debut section 2 */
   .bg-popup {
     width: 100%;
