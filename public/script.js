@@ -58,3 +58,19 @@ function validateForm() {
 document.getElementsByClassName('btnForm')[0].addEventListener('submit', validateForm);
 
 // Activity 4 : Local storage
+const namef = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+function storeValues() {
+  localStorage.setItem('f_name', namef.value);
+  localStorage.setItem('email', email.value);
+  localStorage.setItem('message', message.value);
+}
+namef.addEventListener('input', storeValues);
+email.addEventListener('input', storeValues);
+message.addEventListener('input', storeValues);
+window.addEventListener('load', () => {
+  namef.value = localStorage.getItem('f_name') || '';
+  email.value = localStorage.getItem('email') || '';
+  message.value = localStorage.getItem('message') || '';
+});
