@@ -35,10 +35,10 @@ function createBtn(type, content, lstClass, link) {
   btn.setAttribute('class', lstClass);
   btn.setAttribute('id', lstClass);
   btn.setAttribute('href', link);
-  return type.appendChild(btn);
+  return type.parentNode.appendChild(btn);
 }
 
-createBtn('', '', '', '');
+//createBtn('', '', '', '');
 
 // Activity 3 : Validation form
 function validateForm() {
@@ -61,16 +61,26 @@ document.getElementsByClassName('btnForm')[0].addEventListener('submit', validat
 const namef = document.getElementById('name');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
+
 function storeValues() {
-  localStorage.setItem('f_name', namef.value);
-  localStorage.setItem('email', email.value);
-  localStorage.setItem('message', message.value);
+  let obj = {
+    name: namef.value,
+    email: email.value,
+    message: message.value
+  }
+  window.localStorage.setItem('myObject', JSON.stringify(obj));
+
 }
+
 namef.addEventListener('input', storeValues);
 email.addEventListener('input', storeValues);
 message.addEventListener('input', storeValues);
+
 window.addEventListener('load', () => {
-  namef.value = localStorage.getItem('f_name') || '';
-  email.value = localStorage.getItem('email') || '';
-  message.value = localStorage.getItem('message') || '';
+  const myObject = localStorage.getItem("myObject");
+  const newObj = JSON.parse(myObject);
+
+  namef.value = newObj.name || '';
+  email.value = newObj.email || '';
+  message.value = newObj.message || '';
 });
