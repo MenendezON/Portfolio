@@ -38,7 +38,7 @@ function createBtn(type, content, lstClass, link) {
   return type.parentNode.appendChild(btn);
 }
 
-//createBtn('', '', '', '');
+createBtn('', '', '', '');
 
 // Activity 3 : Validation form
 function validateForm() {
@@ -63,13 +63,12 @@ const email = document.getElementById('email');
 const message = document.getElementById('message');
 
 function storeValues() {
-  let obj = {
+  const obj = {
     name: namef.value,
     email: email.value,
-    message: message.value
-  }
+    message: message.value,
+  };
   window.localStorage.setItem('myObject', JSON.stringify(obj));
-
 }
 
 namef.addEventListener('input', storeValues);
@@ -77,7 +76,7 @@ email.addEventListener('input', storeValues);
 message.addEventListener('input', storeValues);
 
 window.addEventListener('load', () => {
-  const myObject = localStorage.getItem("myObject");
+  const myObject = localStorage.getItem('myObject');
   const newObj = JSON.parse(myObject);
 
   namef.value = newObj.name || '';
