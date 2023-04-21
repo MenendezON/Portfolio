@@ -8,7 +8,7 @@ const item = document.querySelector('.menu');
 menu.addEventListener('click', () => {
   title.style.display = 'none';
   intro.style.display = 'none';
-  nav.style.display = 'block';
+  nav.style.display = block;
 });
 btnclose.addEventListener('click', () => {
   document.getElementById('side-menu').checked = false;
@@ -49,7 +49,7 @@ function validateForm() {
     errorMessage.innerHTML = '**The email must be in lowercase.';
     errorMessage.style.color = 'white';
     errorMessage.style.fontStyle = 'italic';
-    emailField.parentNode.appendChild(errorMessage, emailField.nextSibling);
+    emailField.appendChild(errorMessage, emailField.nextSibling);
     return false;
   }
   return true;
