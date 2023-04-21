@@ -52,7 +52,7 @@ viewpjt.forEach((btns) => {
     btns.style.display = 'none';
     const position = document.getElementsByClassName('step')[3];
     createBtn(position, "See live <img src='./public/images/goonline.jpeg' alt=' '>", 'btn-popup', '#');
-    createBtn(position, "Hello Button <img src='./public/images/github.png' alt=' '>", 'btn-popup', '#');
+    createBtn(position, "Source code <img src='./public/images/github.png' alt=' '>", 'btn-popup', '#');
   });
 });
 clsbtn.addEventListener('click', () => {
