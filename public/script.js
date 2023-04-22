@@ -75,7 +75,7 @@ const openModal = (i) => {
   <div class="step"><img src="./public/images/cross-black.jpeg" alt="Cancel" class="closeBtn"></div>
   <div class="step"><h3 class="subtitle">${projects[i].title}</h3><p class="infos">${projectInfos.join(' • ')}</p></div>
   <p class="paragraph">${projects[i].description}</p>
-  <div class="step"><div class="col"><ul>${projectTechs.join('')}</ul></div><hr>
+  <div class="step"><div class="col"><ul>${projectTechs.join('')}</ul>&nbsp;</div><hr>
   <a class="btn-popup" href="${projects[i].seeLive}">See live <img src="./public/images/goonline.jpeg" alt=" "></a>
   <a class="btn-popup" href="${projects[i].seeSource}">Source code <img src="./public/images/github.png" alt=" "></a>
   </div></div>`;
@@ -108,10 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cancel.addEventListener('click', () => {
         cards.classList.replace('bg-popup', 'item');
         document.getElementsByClassName('popup')[0].classList.replace('popup', 'achievement');
-
-        projects.forEach((ele, i) => {
-          if (i >= 0) showCards(i);
-        });
+        window.location.reload();
       });
     });
   });
