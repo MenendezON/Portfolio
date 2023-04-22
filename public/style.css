@@ -463,7 +463,7 @@ h5 {
 .achievement {
   border: 1px solid var(--collapseborder);
   width: 90%;
-  height: 77vh;
+  height: 650px;
   margin: 100px auto;
   border-radius: 25px;
   padding: 15px;
@@ -477,7 +477,7 @@ h5 {
   border-radius: 8px;
 }
 
-.FBtn {
+.closeBtn {
   margin: 0;
   width: 15px;
   float: right;
@@ -718,7 +718,7 @@ form button {
   }
 
   .popup {
-    width: 45%;
+    width: 50%;
     height: 95%;
     background-color: white;
     margin: 1.5% auto;
@@ -729,8 +729,7 @@ form button {
   }
 
   .popup .fullPic {
-    border-radius: 8px;
-    width: 100%;
+    height: 100%;
   }
 
   .popup .step:nth-of-type(3) {
@@ -743,26 +742,24 @@ form button {
     order: 2;
   }
 
-  .popup p,
-  .popup .step:nth-of-type(4) {
-    flex: 1;
-  }
-
   .popup .step:nth-of-type(1) {
     flex: 1 100%;
-    padding: 10px;
+    padding: 0 10px;
     border-radius: 8px;
-    background-color: green;
+    background-color: silver;
     order: 3;
+    margin-bottom: 10px;
   }
 
   .popup .paragraph {
     order: 3;
+    flex: 2;
   }
 
   .popup .step:nth-of-type(4) {
     order: 5;
     padding-top: 5px;
+    flex: 1;
   }
 
   /* fin popup */
