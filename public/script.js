@@ -29,43 +29,92 @@ item.addEventListener('click', () => {
 });
 
 // Activity 2 : Lauch the modal
-function createBtn(type, content, lstClass, link) {
-  const btn = document.createElement('a');
-  btn.innerHTML = content;
-  btn.setAttribute('class', lstClass);
-  btn.setAttribute('id', lstClass);
-  btn.setAttribute('href', link);
-  return type.appendChild(btn);
-}
+const cards = document.getElementsByClassName('item')[1];
 
-const viewpjt = document.querySelectorAll('.btn');
-const clsbtn = document.getElementsByClassName('closeBtn')[0];
-viewpjt.forEach((btns) => {
-  btns.addEventListener('click', (event) => {
-    const ach = event.target.parentNode;
-    const l2 = ach.parentNode;
-    l2.classList.replace('achievement', 'popup');
-    l2.parentNode.classList.replace('item', 'bg-popup');
-    document.getElementsByClassName('achievement')[0].style.display = 'none';
-    document.getElementsByClassName('achievement')[1].style.display = 'none';
-    clsbtn.style.display = 'block';
-    btns.style.display = 'none';
-    const position = document.getElementsByClassName('step')[3];
-    createBtn(position, "See live <img src='./public/images/goonline.jpeg' alt=' '>", 'btn-popup', '#');
-    createBtn(position, "Source code <img src='./public/images/github.png' alt=' '>", 'btn-popup', '#');
+const projects = [
+  {
+    title: 'Projet 1',
+    subtitle: ['CANOPY', 'Back End Dev', 2020],
+    tags: ['Html', 'CSS', 'Ruby'],
+    imageURL: './public/images/img1.jpg',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    seeLive: '#',
+    seeSource: '#',
+  },
+  {
+    title: 'Projet 2',
+    subtitle: ['CANOPY', 'CMS', 2013],
+    tags: ['WordPress', 'MySQL'],
+    imageURL: './public/images/img2.jpg',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    seeLive: '#',
+    seeSource: '#',
+  },
+  {
+    title: 'Projet 3',
+    subtitle: ['CANOPY', 'Fullstack Dev', 2023],
+    tags: ['Flutter', 'Dart', 'Firebase'],
+    imageURL: './public/images/img3.jpg',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    seeLive: '#',
+    seeSource: '#',
+  },
+];
+
+const openModal = (i) => {
+  cards.classList.replace('item', 'bg-popup');
+
+  const projectInfos = projects[i].subtitle.map((tec) => `${tec}`);
+
+  const projectTechs = projects[i].tags.map((tec) => `<li class="tag">${tec}</li>`);
+
+  cards.innerHTML = `<div class="popup"><div class="step"><img src="${projects[i].imageURL}" alt=" " class="fullPic"></div>
+  <div class="step"><img src="./public/images/cross-black.jpeg" alt="Cancel" class="closeBtn"></div>
+  <div class="step"><h3 class="subtitle">${projects[i].title}</h3><p class="infos">${projectInfos.join(' • ')}</p></div>
+  <p class="paragraph">${projects[i].description}</p>
+  <div class="step"><div class="col"><ul>${projectTechs.join('')}</ul></div>
+  <a class="btn-popup" href="${projects[i].seeLive}">See live <img src="./public/images/goonline.jpeg" alt=" "></a>
+  <a class="btn-popup" href="${projects[i].seeSource}">Source code <img src="./public/images/github.png" alt=" "></a>
+  </div></div>`;
+};
+
+const showCards = (i) => {
+  const projectInfos = projects[i].subtitle.map((tec) => `${tec}`);
+
+  const projectTechs = projects[i].tags.map((tec) => `<li class="tag">${tec}</li>`);
+
+  cards.innerHTML += `<div class="achievement"><div class="step"><img src="${projects[i].imageURL}" alt=" " class="fullPic"></div>
+  <div class="step"><img src="./public/images/cross-black.jpeg" alt="Cancel" class="closeBtn"></div>
+  <div class="step"><h3 class="subtitle">${projects[i].title}</h3><p class="infos">${projectInfos.join(' • ')}</p></div>
+  <p class="paragraph">${projects[i].description}</p>
+  <div class="step"><div class="col"><ul>${projectTechs.join('')}</ul></div>
+  <button type="button" class="btn-popup">See project</button></div></div>`;
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  projects.forEach((ele, i) => {
+    if (i >= 0) showCards(i);
   });
-});
-clsbtn.addEventListener('click', () => {
-  document.querySelector('.bg-popup').classList.replace('bg-popup', 'item');
-  document.querySelector('.popup').classList.replace('popup', 'achievement');
-  const position = document.getElementsByClassName('step')[3];
-  position.removeChild(position.children[3]);
-  position.removeChild(position.children[3]);
-  document.getElementById('btn').style.display = 'block';
-  clsbtn.style.display = 'none';
-  document.getElementsByClassName('achievement')[0].removeAttribute('style');
-  document.getElementsByClassName('achievement')[1].removeAttribute('style');
-  document.getElementsByClassName('achievement')[2].removeAttribute('style');
+
+  const seeProject = document.querySelectorAll('.btn-popup');
+
+  seeProject.forEach((project, i) => {
+    seeProject[i].addEventListener('click', () => {
+      openModal(i);
+      const cancel = document.querySelector('.closeBtn');
+      cancel.addEventListener('click', () => {
+        cards.classList.replace('bg-popup', 'item');
+        document.getElementsByClassName('popup')[0].classList.replace('popup', 'achievement');
+
+        projects.forEach((ele, i) => {
+          if (i >= 0) showCards(i);
+        });
+      });
+    });
+  });
 });
 
 // Activity 3 : Validation form
