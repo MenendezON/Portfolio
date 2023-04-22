@@ -763,7 +763,7 @@ form button {
     order: 2;
   }
 
-  .popup p,
+  .popup .paragraph,
   .popup .step:nth-of-type(4) {
     flex: 1;
   }
