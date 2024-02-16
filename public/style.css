@@ -447,12 +447,19 @@ h5 {
   }
 }
 
+section.item{
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
 .achievement {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   background-color: var(--white);
-  margin: 80px auto;
+  margin: 30px auto;
   border-radius: 25px;
   padding: 15px;
   width: 90%;
@@ -503,7 +510,10 @@ h5 {
 }
 
 /* popup css */
-
+.see-more{
+  width: 200px;
+  margin: auto;
+}
 /* debut section 2 */
 
 .popup .fullPic {
@@ -610,8 +620,6 @@ form button {
   width: 15px;
 }
 
-  display: inline;
-
 .collapse ul li img {
   width: 48px;
   height: 48px;
@@ -708,7 +716,7 @@ form button {
     justify-content: space-around;
     align-items: start;
     background-color: var(--white);
-    margin: 80px auto;
+    margin: 30px auto;
     border-radius: 25px;
     padding: 35px;
     width: 90%;

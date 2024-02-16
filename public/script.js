@@ -108,6 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (i >= 0) showCards(i);
   });
 
+  cards.innerHTML += `
+    <div class="see-more">
+     <a href="" class="btn-popup">See more projects</a><br/><br/>
+    </div>
+  `;
+
   const seeProject = document.querySelectorAll('.btn-popup');
 
   seeProject.forEach((project, i) => {
