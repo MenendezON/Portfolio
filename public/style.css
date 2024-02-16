@@ -272,6 +272,10 @@ h5 {
   margin-bottom: 10px;
 }
 
+.tag ul li{
+  display: inline;
+}
+
 .col ul li,
 .link-connect ul li {
   display: inline;
@@ -347,23 +351,6 @@ h5 {
     transform-origin: top;
     opacity: 1;
   }
-}
-
-.tag {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  color: var(--purple);
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 4px 12px;
-  background: #ebebff;
-  border-radius: 8px;
 }
 
 /* about */
@@ -461,19 +448,46 @@ h5 {
 }
 
 .achievement {
-  border: 1px solid var(--collapseborder);
-  width: 90%;
-  height: 650px;
-  margin: 100px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: var(--white);
+  margin: 80px auto;
   border-radius: 25px;
   padding: 15px;
-  background-color: var(--white);
+  width: 90%;
 }
 
-.achievement .fullPic {
+.achievement>div:first-child{
+  border-radius: 8px;
+  background-color: var(--white);
+  border:12px solid green;
+}
+
+.achievement>div>img {
   width: 100%;
-  background: green;
-  padding: 10px;
+}
+
+.achievement>div:last-child{
+ padding:15px;
+}
+
+.achievement>.col-right>ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.achievement>.col-right>ul li{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: var(--purple);
+  align-items: center;
+  padding: 4px 12px;
+  background: #ebebff;
   border-radius: 8px;
 }
 
@@ -596,6 +610,8 @@ form button {
   width: 15px;
 }
 
+  display: inline;
+
 .collapse ul li img {
   width: 48px;
   height: 48px;
@@ -687,21 +703,19 @@ form button {
   }
 
   .achievement {
-    border: 1px solid var(--collapseborder);
-    width: 80.28%;
-    height: 500px;
-    margin: 100px auto;
-    border-radius: 25px;
-    padding: 24px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: start;
     background-color: var(--white);
+    margin: 80px auto;
+    border-radius: 25px;
+    padding: 35px;
+    width: 90%;
   }
-
-  .achievement .fullPic {
+  
+  .achievement>div{
     width: 50%;
-    float: left;
-    background: green;
-    padding: 10px;
-    margin: 24px;
   }
 
   /* popup css */
@@ -719,7 +733,6 @@ form button {
 
   .popup {
     width: 50%;
-    height: 95%;
     background-color: white;
     margin: 1.5% auto;
     border-radius: 8px;
@@ -764,11 +777,15 @@ form button {
 
   /* fin popup */
 
+  display: inline;
+  
   .collapse ul {
     display: flex;
     gap: 6px;
   }
 
+  display: inline;
+  
   .collapse ul li {
     background-color: var(--collapsebg);
     font-weight: 500;
