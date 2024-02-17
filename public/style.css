@@ -96,7 +96,9 @@ ul {
 
 .header {
   background-color: var(--white);
-  position: sticky;
+  border-bottom: 1px solid #efefef;
+  position: fixed;
+  width: 100vw;
   top: 0;
   height: 80px;
 }
@@ -662,7 +664,7 @@ form button {
   .nav {
     background-color: var(--white);
     position: relative;
-    height: 80px;
+    height: 79px;
     max-height: 80px;
     width: 100%;
     top: 0;
