@@ -33,18 +33,18 @@ const cards = document.getElementsByClassName('item')[1];
 
 const projects = [
   {
-    title: 'Budget app',
-    subtitle: ['CANOPY', 'Full stack Dev', 2023],
-    tags: ['HTML', 'CSS', 'Javascript'],
-    imageURL: './public/images/project/budget-app.png',
+    title: 'Motorcycle Appointment',
+    subtitle: ['CANOPY', 'Full stack web Dev', 2023],
+    tags: ['Ruby on rails', 'React', 'Bootstrap', 'PostgreSQL'],
+    imageURL: './public/images/project/motorbike.png',
     description:
-      'Budget App is a web project based on Ruby on Rails, using Postgresql as a database. To use this app, the user has to create an account, then log in, at this point the user can manage his data like creating and displaying new categories, then new records for their transactions.',
-    seeLive: 'https://capstone-budgetapp.onrender.com/',
-    seeSource: 'https://github.com/MenendezON/Budget-app',
+      'Motorcycle Appointment is a web platform tailored for motorcycle enthusiasts, offering an immersive experience to discover the latest models from leading brands and easily book exhilarating rides.',
+    seeLive: 'https://motorcycle-lksr.onrender.com/',
+    seeSource: 'https://github.com/MenendezON/book-an-appointment',
   },
   {
     title: 'GebCristal',
-    subtitle: ['CANOPY', 'CMS', 2022],
+    subtitle: ['CANOPY', 'WordPress', 2022],
     tags: ['WordPress', 'Elementor', 'MySQL'],
     imageURL: './public/images/project/img1.jpg',
     description:
@@ -54,8 +54,8 @@ const projects = [
   },
   {
     title: 'Sama cogn',
-    subtitle: ['CANOPY', 'Fullstack Dev', 2023],
-    tags: ['Flutter', 'Dart'],
+    subtitle: ['CANOPY', 'Mobile Dev', 2023],
+    tags: ['Flutter', 'Dart', 'Firebase'],
     imageURL: './public/images/project/sama-kogn.png',
     description:
       `In this first version, users can explore a selection of emblematic places in different African countries. Each location is accompanied by photos and information for an immersive learning experience.<br/>
@@ -64,6 +64,16 @@ const projects = [
     seeLive: 'https://play.google.com/store/apps/details?id=com.sama.kogn.sn.samakogn',
     seeSource: 'https://github.com/MenendezON/Africa-App',
   },
+  {
+    title: 'Budget app',
+    subtitle: ['CANOPY', 'Full stack Web Dev', 2023],
+    tags: ['HTML', 'CSS', 'Javascript'],
+    imageURL: './public/images/project/budget-app.png',
+    description:
+      'Budget App is a web project based on Ruby on Rails, using Postgresql as a database. To use this app, the user has to create an account, then log in, at this point the user can manage his data like creating and displaying new categories, then new records for their transactions.',
+    seeLive: 'https://capstone-budgetapp.onrender.com/',
+    seeSource: 'https://github.com/MenendezON/Budget-app',
+  }
 ];
 
 const openModal = (i) => {
@@ -71,16 +81,39 @@ const openModal = (i) => {
 
   const projectInfos = projects[i].subtitle.map((tec) => `${tec}`);
 
-  const projectTechs = projects[i].tags.map((tec) => `<li class="tag">${tec}</li>`);
+  const projectTechs = projects[i].tags.map((tec) => `<li class="tag-item">${tec}</li>`);
 
-  cards.innerHTML = `<div class="popup"><div class="step"><img src="${projects[i].imageURL}" alt=" " class="fullPic"></div>
-  <div class="step"><img src="./public/images/cross-black.jpeg" alt="Cancel" class="closeBtn"></div>
-  <div class="step"><h3 class="subtitle">${projects[i].title}</h3><p class="infos">${projectInfos.join(' • ')}</p></div>
-  <p class="paragraph">${projects[i].description}</p>
-  <div class="step"><div class="col"><ul>${projectTechs.join('')}</ul>&nbsp;</div><hr>
-  <a class="btn-popup" href="${projects[i].seeLive}" target="_blank">See live <img src="./public/images/goonline.jpeg" alt=" "></a>
-  <a class="btn-popup" href="${projects[i].seeSource}" target="_blank">Source code <img src="./public/images/github.png" alt=" "></a>
-  </div></div>`;
+  cards.innerHTML = `
+  <div class="popup">
+    <div class="head">
+      <div class="title-closebtn">
+        <h3 class="subtitle">${projects[i].title}</h3>
+        <img src="./public/images/cross-black.jpeg" alt="Cancel" class="closeBtn">
+      </div>
+      <div class="subtitle">
+        <p class="infos">${projectInfos.join(' • ')}</p>
+      </div>
+    </div>
+    <div class="illustration">
+      <img src="${projects[i].imageURL}" alt=" " class="fullPic">
+    </div>
+    <div class="caption">
+      <div class="description">
+        <p class="paragraph">${projects[i].description}</p>
+      </div>
+      <div class="details">
+        <ul>${projectTechs.join('')}</ul>&nbsp;
+        <div class="buttons">
+          <a class="btn-popup" href="${projects[i].seeLive}" target="_blank">
+            See live <img src="./public/images/goonline.jpeg" alt=" ">
+          </a>
+          <a class="btn-popup" href="${projects[i].seeSource}" target="_blank">
+            Source code <img src="./public/images/github.png" alt=" ">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>`;
 };
 
 const showCards = (i, color) => {
@@ -112,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cards.innerHTML += `
     <div class="see-more">
-     <a href="" class="btn-popup">See more projects</a><br/><br/>
+     <a href="https://github.com/MenendezON" target="_blank" class="btn-popup">See more projects on my GitHub</a><br/><br/>
     </div>
   `;
 
