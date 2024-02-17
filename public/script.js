@@ -83,14 +83,14 @@ const openModal = (i) => {
   </div></div>`;
 };
 
-const showCards = (i) => {
+const showCards = (i, color) => {
   const projectInfos = projects[i].subtitle.map((tec) => `${tec}`);
 
   const projectTechs = projects[i].tags.map((tec) => `<li class="tag-item">${tec}</li>`);
 
   cards.innerHTML += `
   <div class="achievement">
-    <div class="col-left">
+    <div class="col-left" style="border-color:${color}">
       <img src="${projects[i].imageURL}" alt=" " class="fullPic">
     </div>
     <div class="col-right">
@@ -104,8 +104,10 @@ const showCards = (i) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  const Colors = ['red', 'green', 'orange'];
   projects.forEach((ele, i) => {
-    if (i >= 0) showCards(i);
+    let color = Colors[i];
+    if (i >= 0) showCards(i, color);
   });
 
   cards.innerHTML += `

@@ -313,6 +313,7 @@ h5 {
 .paragraph {
   margin: 0;
   flex: none;
+  text-align: justify;
   order: 1;
   flex-grow: 0;
   -webkit-animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s both;
@@ -470,7 +471,8 @@ section.item{
 .achievement>div:first-child{
   border-radius: 8px;
   background-color: var(--white);
-  border:12px solid green;
+  border-style: solid;
+  border-width: 6px;
 }
 
 .achievement>div>img {
@@ -693,6 +695,11 @@ form button {
     flex-grow: 0;
   }
 
+  .home p{
+    font-size: 20pt;
+    line-height: 40px;
+  }
+
   .project {
     display: flex;
     flex-flow: row wrap;
@@ -726,6 +733,13 @@ form button {
   
   .achievement>div{
     width: 50%;
+  }
+
+  .achievement>div:first-child{
+    border-radius: 8px;
+    background-color: var(--white);
+    border-style: solid;
+    border-width: 12px;
   }
 
   /* popup css */
@@ -786,15 +800,11 @@ form button {
   }
 
   /* fin popup */
-
-  display: inline;
   
   .collapse ul {
     display: flex;
     gap: 6px;
   }
-
-  display: inline;
   
   .collapse ul li {
     background-color: var(--collapsebg);
