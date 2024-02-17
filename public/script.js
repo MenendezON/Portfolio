@@ -73,7 +73,7 @@ const projects = [
       'Budget App is a web project based on Ruby on Rails, using Postgresql as a database. To use this app, the user has to create an account, then log in, at this point the user can manage his data like creating and displaying new categories, then new records for their transactions.',
     seeLive: 'https://capstone-budgetapp.onrender.com/',
     seeSource: 'https://github.com/MenendezON/Budget-app',
-  }
+  },
 ];
 
 const openModal = (i) => {
@@ -139,8 +139,7 @@ const showCards = (i, color) => {
 document.addEventListener('DOMContentLoaded', () => {
   const Colors = ['red', 'green', 'orange'];
   projects.forEach((ele, i) => {
-    let color = Colors[i];
-    if (i >= 0) showCards(i, color);
+    if (i >= 0) showCards(i, Colors[i]);
   });
 
   cards.innerHTML += `

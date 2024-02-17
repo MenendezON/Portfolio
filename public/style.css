@@ -274,7 +274,7 @@ h5 {
   margin-bottom: 10px;
 }
 
-.tag ul li{
+.tag ul li {
   display: inline;
 }
 
@@ -443,7 +443,7 @@ h5 {
   }
 }
 
-section.item{
+section.item {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -461,29 +461,34 @@ section.item{
   width: 90%;
 }
 
-.achievement>div:first-child{
+.achievement > div:first-child {
   border-radius: 8px;
   background-color: var(--white);
   border-style: solid;
   border-width: 6px;
 }
 
-.achievement>div>img {
+.btnForm img,
+.btn img {
+  width: 15px;
+}
+
+.achievement > div > img {
   width: 100%;
 }
 
-.achievement>div:last-child{
- padding:15px;
+.achievement > div:last-child {
+  padding: 15px;
 }
 
-.achievement>.col-right>ul {
+.achievement > .col-right > ul {
   display: flex;
   flex-flow: row wrap;
   margin-top: 10px;
   gap: 10px;
 }
 
-.achievement>.col-right>ul li{
+.achievement > .col-right > ul li {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
@@ -507,10 +512,11 @@ section.item{
 }
 
 /* popup css */
-.see-more{
+.see-more {
   width: 200px;
   margin: auto;
 }
+
 /* debut section 2 */
 .bg-popup {
   width: 100%;
@@ -532,51 +538,59 @@ section.item{
   flex-flow: column wrap;
 }
 
-.popup>.illustration>img{
+.collapse ul li img {
+  width: 48px;
+  height: 48px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.popup > .illustration > img {
   width: 100%;
 }
 
-.popup>.head{
+.popup > .head {
   display: flex;
   flex-direction: column;
 }
 
-.popup>.head>.title-closebtn{
+.popup > .head > .title-closebtn {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.popup>.head>.title-closebtn>h3{
-  font-size:1.5em;
+.popup > .head > .title-closebtn > h3 {
+  font-size: 1.5em;
 }
 
-.popup>.caption{
+.popup > .caption {
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
 }
 
-.popup>.caption>.description{
+.popup > .caption > .description {
   flex: 2;
   border-right: 0;
   padding-right: 0;
-  order:2;
+  order: 2;
 }
-.popup>.caption>.details{
+
+.popup > .caption > .details {
   flex: 1;
   order: 1;
 }
 
-.popup>.caption>.details>ul {
+.popup > .caption > .details > ul {
   display: flex;
   flex-flow: row wrap;
   margin-top: 10px;
   gap: 10px;
 }
 
-.popup>.caption>.details>ul>li{
+.popup > .caption > .details > ul > li {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
@@ -588,7 +602,7 @@ section.item{
   border-radius: 8px;
 }
 
-.popup>.caption>.details>.buttons{
+.popup > .caption > .details > .buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -659,18 +673,6 @@ form button {
   float: left;
 }
 
-.btnForm img,
-.btn img {
-  width: 15px;
-}
-
-.collapse ul li img {
-  width: 48px;
-  height: 48px;
-  margin-right: 3px;
-  vertical-align: middle;
-}
-
 .btn-popup:hover,
 .btnForm:hover,
 .btn:hover {
@@ -735,7 +737,7 @@ form button {
     flex-grow: 0;
   }
 
-  .home p{
+  .home p {
     font-size: 20pt;
     line-height: 40px;
   }
@@ -770,12 +772,12 @@ form button {
     padding: 35px;
     width: 90%;
   }
-  
-  .achievement>div{
+
+  .achievement > div {
     width: 50%;
   }
 
-  .achievement>div:first-child{
+  .achievement > div:first-child {
     border-radius: 8px;
     background-color: var(--white);
     border-style: solid;
@@ -805,67 +807,55 @@ form button {
     flex-flow: column wrap;
   }
 
-  .popup>.head{
+  .popup > .head {
     display: flex;
     flex-direction: column;
   }
 
-  .popup>.head>.title-closebtn{
+  .popup > .head > .title-closebtn {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
   }
 
-  .popup>.caption{
+  .popup > .caption {
     display: flex;
     flex-direction: row;
-    gap:10px;
+    gap: 10px;
   }
 
-  .popup>.caption>.description{
+  .popup > .caption > .description {
     flex: 2;
     border-right: 5px solid var(--purple);
     padding-right: 5px;
-    order:1;
-  }
-  .popup>.caption>.details{
-    flex: 1;
-    order:2;
+    order: 1;
   }
 
-  .popup>.caption>.details>ul {
+  .popup > .caption > .details {
+    flex: 1;
+    order: 2;
+  }
+
+  .collapse ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 6px;
+  }
+
+  .popup > .caption > .details > ul {
     display: flex;
     flex-flow: row wrap;
     margin-top: 10px;
     gap: 10px;
   }
 
-  .popup>.caption>.details>.buttons{
+  .popup > .caption > .details > .buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .popup>.caption>.details>ul>li{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    color: var(--purple);
-    align-items: center;
-    padding: 4px 12px;
-    background: #ebebff;
-    border-radius: 8px;
-  }
-  /* fin popup */
-  
-  .collapse ul {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 6px;
-  }
-  
   .collapse ul li {
     background-color: var(--collapsebg);
     font-weight: 500;
@@ -878,6 +868,19 @@ form button {
     flex-direction: column;
   }
 
+  .popup > .caption > .details > ul > li {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: var(--purple);
+    align-items: center;
+    padding: 4px 12px;
+    background: #ebebff;
+    border-radius: 8px;
+  }
+
+  /* fin popup */
   .item:nth-of-type(4) {
     background-image: url(./images/imgbg-desktop-contact.png);
     background-size: cover;
