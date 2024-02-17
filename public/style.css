@@ -49,7 +49,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 25px;
   color: var(--textColor);
   height: 100%;
   background-color: var(--bgColor);
@@ -415,13 +415,6 @@ h5 {
   margin: 6px 0 6px 0;
 }
 
-/* .aside-2 {
-  order: 3;
-  width: 100%;
-  -webkit-animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-} */
-
 @-webkit-keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(1000px);
@@ -702,13 +695,13 @@ form button {
 
   .project {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     padding: 0;
     margin: 166px 144px 166px 144px;
   }
 
   .project > * {
-    flex: 1 100%;
+    width: 50%;
   }
 
   .item:nth-of-type(1) {
@@ -803,6 +796,7 @@ form button {
   
   .collapse ul {
     display: flex;
+    flex-flow: row wrap;
     gap: 6px;
   }
   
