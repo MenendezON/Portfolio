@@ -33,34 +33,46 @@ const cards = document.getElementsByClassName('item')[1];
 
 const projects = [
   {
-    title: 'Projet 1',
-    subtitle: ['CANOPY', 'Back End Dev', 2020],
-    tags: ['Html', 'CSS', 'Ruby'],
-    imageURL: './public/images/img1.jpg',
+    title: 'Motorcycle Appointment',
+    subtitle: ['CANOPY', 'Full stack web Dev', 2023],
+    tags: ['Ruby on rails', 'React', 'Bootstrap', 'PostgreSQL'],
+    imageURL: './public/images/project/motorbike.png',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    seeLive: '#',
+      'Motorcycle Appointment is a web platform tailored for motorcycle enthusiasts, offering an immersive experience to discover the latest models from leading brands and easily book exhilarating rides.',
+    seeLive: 'https://motorcycle-lksr.onrender.com/',
+    seeSource: 'https://github.com/MenendezON/book-an-appointment',
+  },
+  {
+    title: 'GebCristal',
+    subtitle: ['CANOPY', 'WordPress', 2022],
+    tags: ['WordPress', 'Elementor', 'MySQL'],
+    imageURL: './public/images/project/img1.jpg',
+    description:
+      'Gebcristal is a company founded in Haiti in 2016 by Gabrielle Odin, a Frenchwoman, Reiki Master, lover of stones and applied neuroscience coach. Gabrielle provides Reiki treatments to which she associates the energy of crystals, and also organizes workshops, training courses and initiations around lithotherapy, personal development and Reiki. Trained and certified at INA as an applied neuroscience coach, Gabrielle has recently equipped herself further to deepen her quest for knowledge of the human being, with the aim of accompanying each person towards their true purpose, their true self, and their personal and professional fulfillment.',
+    seeLive: 'https://gebcristal.com',
     seeSource: '#',
   },
   {
-    title: 'Projet 2',
-    subtitle: ['CANOPY', 'CMS', 2013],
-    tags: ['WordPress', 'MySQL'],
-    imageURL: './public/images/img2.jpg',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    seeLive: '#',
-    seeSource: '#',
-  },
-  {
-    title: 'Projet 3',
-    subtitle: ['CANOPY', 'Fullstack Dev', 2023],
+    title: 'Sama cogn',
+    subtitle: ['CANOPY', 'Mobile Dev', 2023],
     tags: ['Flutter', 'Dart', 'Firebase'],
-    imageURL: './public/images/img3.jpg',
+    imageURL: './public/images/project/sama-kogn.png',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    seeLive: '#',
-    seeSource: '#',
+      `In this first version, users can explore a selection of emblematic places in different African countries. Each location is accompanied by photos and information for an immersive learning experience.<br/>
+
+      This first version of "Africa" is the fruit of many hours of hard work in development, and we are proud to share this unique experience with you. We hope you enjoy exploring Africa through our application.`,
+    seeLive: 'https://play.google.com/store/apps/details?id=com.sama.kogn.sn.samakogn',
+    seeSource: 'https://github.com/MenendezON/Africa-App',
+  },
+  {
+    title: 'Budget app',
+    subtitle: ['CANOPY', 'Full stack Web Dev', 2023],
+    tags: ['HTML', 'CSS', 'Javascript'],
+    imageURL: './public/images/project/budget-app.png',
+    description:
+      'Budget App is a web project based on Ruby on Rails, using Postgresql as a database. To use this app, the user has to create an account, then log in, at this point the user can manage his data like creating and displaying new categories, then new records for their transactions.',
+    seeLive: 'https://capstone-budgetapp.onrender.com/',
+    seeSource: 'https://github.com/MenendezON/Budget-app',
   },
 ];
 
@@ -69,35 +81,72 @@ const openModal = (i) => {
 
   const projectInfos = projects[i].subtitle.map((tec) => `${tec}`);
 
-  const projectTechs = projects[i].tags.map((tec) => `<li class="tag">${tec}</li>`);
+  const projectTechs = projects[i].tags.map((tec) => `<li class="tag-item">${tec}</li>`);
 
-  cards.innerHTML = `<div class="popup"><div class="step"><img src="${projects[i].imageURL}" alt=" " class="fullPic"></div>
-  <div class="step"><img src="./public/images/cross-black.jpeg" alt="Cancel" class="closeBtn"></div>
-  <div class="step"><h3 class="subtitle">${projects[i].title}</h3><p class="infos">${projectInfos.join(' • ')}</p></div>
-  <p class="paragraph">${projects[i].description}</p>
-  <div class="step"><div class="col"><ul>${projectTechs.join('')}</ul>&nbsp;</div><hr>
-  <a class="btn-popup" href="${projects[i].seeLive}">See live <img src="./public/images/goonline.jpeg" alt=" "></a>
-  <a class="btn-popup" href="${projects[i].seeSource}">Source code <img src="./public/images/github.png" alt=" "></a>
-  </div></div>`;
+  cards.innerHTML = `
+  <div class="popup">
+    <div class="head">
+      <div class="title-closebtn">
+        <h3 class="subtitle">${projects[i].title}</h3>
+        <img src="./public/images/cross-black.jpeg" alt="Cancel" class="closeBtn">
+      </div>
+      <div class="subtitle">
+        <p class="infos">${projectInfos.join(' • ')}</p>
+      </div>
+    </div>
+    <div class="illustration">
+      <img src="${projects[i].imageURL}" alt=" " class="fullPic">
+    </div>
+    <div class="caption">
+      <div class="description">
+        <p class="paragraph">${projects[i].description}</p>
+      </div>
+      <div class="details">
+        <ul>${projectTechs.join('')}</ul>&nbsp;
+        <div class="buttons">
+          <a class="btn-popup" href="${projects[i].seeLive}" target="_blank">
+            See live <img src="./public/images/goonline.jpeg" alt=" ">
+          </a>
+          <a class="btn-popup" href="${projects[i].seeSource}" target="_blank">
+            Source code <img src="./public/images/github.png" alt=" ">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>`;
 };
 
-const showCards = (i) => {
+const showCards = (i, color) => {
   const projectInfos = projects[i].subtitle.map((tec) => `${tec}`);
 
-  const projectTechs = projects[i].tags.map((tec) => `<li class="tag">${tec}</li>`);
+  const projectTechs = projects[i].tags.map((tec) => `<li class="tag-item">${tec}</li>`);
 
-  cards.innerHTML += `<div class="achievement"><div class="step"><img src="${projects[i].imageURL}" alt=" " class="fullPic"></div>
-  <div class="step"><img src="./public/images/cross-black.jpeg" alt="Cancel" class="closeBtn"></div>
-  <div class="step"><h3 class="subtitle">${projects[i].title}</h3><p class="infos">${projectInfos.join(' • ')}</p></div>
-  <p class="paragraph">${projects[i].description}</p>
-  <div class="step"><div class="col"><ul>${projectTechs.join('')}</ul></div>
-  <button type="button" class="btn-popup">See project</button></div></div>`;
+  cards.innerHTML += `
+  <div class="achievement">
+    <div class="col-left" style="border-color:${color}">
+      <img src="${projects[i].imageURL}" alt=" " class="fullPic">
+    </div>
+    <div class="col-right">
+      <h3 class="subtitle">${projects[i].title}</h3>
+      <p class="infos">${projectInfos.join(' • ')}</p>
+      <p class="paragraph">${projects[i].description}</p>
+      <ul>${projectTechs.join('')}</ul>
+      <button type="button" class="btn-popup">See project</button>
+    </div>
+  </div>`;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  const Colors = ['red', 'green', 'orange'];
   projects.forEach((ele, i) => {
-    if (i >= 0) showCards(i);
+    if (i >= 0) showCards(i, Colors[i]);
   });
+
+  cards.innerHTML += `
+    <div class="see-more">
+     <a href="https://github.com/MenendezON" target="_blank" class="btn-popup">See more projects on my GitHub</a><br/><br/>
+    </div>
+  `;
 
   const seeProject = document.querySelectorAll('.btn-popup');
 
