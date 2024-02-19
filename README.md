@@ -31,7 +31,7 @@
 # 📖 Portfolio <a name="about-project"></a>
 
 
-**Menendezon's Portfolio** is a project that introduces me as a Software developer with some achievements, a short description of me, my tech and soft skills, and a contact form for those who hope to reach out to me.
+**Menendezon's Portfolio** is a project that introduces me as a Software developer with some of my achievements, a short description of me, my tech and soft skills, and a contact form for those who hope to contact me.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -50,16 +50,16 @@
 - **Adding pictures**
 - **Using flex**
 - **Usign grid**
-- **Side bar menu**
+- **Sidebar menu**
 - **Create a contact form**
 - **Adding js feature**
-- **Store messages from contact form**
+- **Store messages from the contact form**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Click on this link to visit the project : https://menendezon.github.io/Portfolio/
+- Click on this link to visit the project: https://menendezon.github.io/Portfolio/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,7 +70,7 @@ To get a local copy up and running, follow these steps. It's a simple static pro
 
 ### Prerequisites
 
-In order to run this project, you need :
+To run this project, you need :
 - Git to clone it (optional) 
 - A browser to run it
 - Some skill in HTML/CSS and js
@@ -104,7 +104,7 @@ This project has been deployed at this address https://menendezon.github.io/Port
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Menendez NELSON**
 
 - GitHub: [@menendezon](https://github.com/menendezon)
 - Twitter: [@menendezon](https://twitter.com/menendezon)
