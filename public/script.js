@@ -65,14 +65,14 @@ const projects = [
     seeSource: 'https://github.com/MenendezON/Africa-App',
   },
   {
-    title: 'Budget app',
+    title: 'Math Magicians',
     subtitle: ['CANOPY', 'Full stack Web Dev', 2023],
-    tags: ['HTML', 'CSS', 'Javascript'],
-    imageURL: './public/images/project/budget-app.png',
+    tags: ['Webpack', 'CSS', 'Javascript'],
+    imageURL: './public/images/project/math.png',
     description:
-      'Budget App is a web project based on Ruby on Rails, using Postgresql as a database. To use this app, the user has to create an account, then log in, at this point the user can manage his data like creating and displaying new categories, then new records for their transactions.',
-    seeLive: 'https://capstone-budgetapp.onrender.com/',
-    seeSource: 'https://github.com/MenendezON/Budget-app',
+      'Math Magicians, it is a website project. It is a single-page app project based on React that allows users to make simple calculations and read a random faith-related quote.',
+    seeLive: 'https://mathmagicians-9uao.onrender.com/',
+    seeSource: 'https://github.com/MenendezON/math-magicians',
   },
 ];
 
