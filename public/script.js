@@ -23,7 +23,7 @@ function display(type, state) {
 }
 item.addEventListener('click', () => {
   document.getElementById('side-menu').checked = false;
-  nav.style.display = 'none';
+  //nav.style.display = 'none';
   title.style.display = 'block';
   display(intro, 'block');
 });
