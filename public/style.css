@@ -725,7 +725,7 @@ form button {
     background-color: var(--white);
     background-image: url(./images/imgbg.jpg);
     background-repeat: no-repeat;
-    padding: 260px 15% 0 15%;
+    padding: 25vh 15% 0 15%;
     border-bottom-left-radius: 100px;
   }
 
